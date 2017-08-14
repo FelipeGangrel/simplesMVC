@@ -2,22 +2,9 @@
 
 require __DIR__ . '/../vendor/autoload.php';
 
-$app = new Libs\App();
+$app = new Core\App();
 
-$app->addRoute('/', 'HomeController@index')
-    ->addRoute('/teste', 'HomeController@teste')
-    ->addRoute('/outro/teste/{id}/', 'HomeController@outroTeste');
+$app->route('get','/teste/{i}', 'HomeController@teste', ['id'] );
 
-$routes = $app->getRoutes();
-$uri = $app->getUri();
-
-echo "<pre>";
-print_r($routes);
-echo "</pre>";
-
-echo "<pre>";
-print_r($uri);
-echo "</pre>";
-
-$app->start();
+$app->run();
 

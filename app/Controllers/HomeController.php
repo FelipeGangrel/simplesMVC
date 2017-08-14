@@ -1,6 +1,6 @@
 <?php namespace App\Controllers;
 
-use Libs\Controller;
+use Core\Controller;
 
 class HomeController extends Controller
 {
@@ -17,8 +17,9 @@ class HomeController extends Controller
     }
 
     public function teste($param = null)
-    {
-        $this->view->render('home.teste');
+    {   
+        die(var_dump($param));
+        $this->view->render('home.teste', compact('param'));
     }
 
     public function outroTeste()

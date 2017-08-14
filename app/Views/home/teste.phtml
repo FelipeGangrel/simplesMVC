@@ -8,5 +8,8 @@
 </head>
 <body>
     <h1>Apenas uma página de teste</h1>
+    <?php if( $this->content['param'] ): ?> 
+        Parâmetro: <?php echo $this->content['param']; ?>
+    <?php endif; ?>
 </body>
 </html>
