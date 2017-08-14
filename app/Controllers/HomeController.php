@@ -1,6 +1,6 @@
-<?php
+<?php namespace App\Controllers;
 
-require 'Libs/Controller.php';
+use Libs\Controller;
 
 class HomeController extends Controller
 {
@@ -18,6 +18,11 @@ class HomeController extends Controller
 
     public function teste($param = null)
     {
-        echo "apenas um teste! $param";
+        $this->view->render('home.teste');
+    }
+
+    public function outroTeste()
+    {
+        $this->view->render('home.outro_teste');
     }
 }

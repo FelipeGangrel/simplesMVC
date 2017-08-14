@@ -1,6 +1,4 @@
-<?php
-
-require_once 'Libs/View.php';
+<?php namespace Libs;
 
 class Controller
 {   

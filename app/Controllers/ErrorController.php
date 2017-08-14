@@ -1,6 +1,6 @@
-<?php
+<?php namespace App\Controllers;
 
-require_once 'Libs/Controller.php';
+use Libs\Controller;
 
 class ErrorController extends Controller
 {

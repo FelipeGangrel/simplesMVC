@@ -1,4 +1,4 @@
-<?php
+<?php namespace Libs;
 
 class View{
 
@@ -7,7 +7,7 @@ class View{
 
     public function render(string $viewName, $content = null)
     {   
-        $this->viewName = "Views/".str_replace(".","/",$viewName).".phtml";
+        $this->viewName = "../app/Views/".str_replace(".","/",$viewName).".phtml";
         $this->content = $content;
         require($this->viewName);
     }
